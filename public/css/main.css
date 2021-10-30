@@ -1,47 +1,57 @@
-.input{
+.input {
     border: 0;
-    outline: 2.5px solid #CBD1D6;
+    outline: 2.5px solid #cbd1d6;
     border-radius: 7px;
     padding: 10px 10px;
     transition: all 0.2s;
 }
 
-.input:hover{
+.input:hover {
     border: 0;
     outline: 2.5px solid #929394d3;
 }
 
-.input:focus-visible{
+.input:focus-visible {
     border: 0;
-    outline: 3.5px solid #0077FF!important;
+    outline: 3.5px solid #0077ff !important;
 }
 
-.input:focus{
+.input:focus {
     border: 0;
-    outline: 3.5px solid #0077FF!important;
+    outline: 3.5px solid #0077ff !important;
 }
 
-.input[type="text"]:focus:valid{
+.input[type="text"]:focus:valid {
     border: 0;
-    outline: 3.5px solid #38C844!important;
+    outline: 3.5px solid #38c844 !important;
 }
 
-.input[type="text"]:invalid{
+.input[type="text"]:invalid {
     border: 0;
-    outline: 3.5px solid #E94040!important;
+    outline: 3.5px solid #e94040 !important;
 }
 
-.carpool-button{
+.carpool-button {
     color: white;
     padding: 10px 25px;
     text-align: center;
     border-radius: 7px;
     width: 50%;
-    background: #0077FF;
+    background: #0077ff;
     border: 0;
     transition: all 0.25s;
 }
 
-.carpool-button:active{
+.carpool-button:active {
     transform: scale(0.95);
+}
+
+.glassmorphism {
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }

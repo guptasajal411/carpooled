@@ -1,17 +1,5 @@
 body {
-    background: #2980b9;
-    background: -webkit-linear-gradient(
-        to right,
-        #ffffff,
-        #6dd5fa,
-        #2980b9
-    );
-    background: linear-gradient(
-        to right,
-        #ffffff,
-        #6dd5fa,
-        #2980b9
-    );
+    background: url("/img/bg.png") no-repeat center center/cover;
     min-height: 100vh;
 }
 
