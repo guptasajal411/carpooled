@@ -6,8 +6,6 @@ mongoose.connect("mongodb+srv://" + process.env.usernameMongoDB + ":" + process.
 const userSchema = new mongoose.Schema({
     username: String,
     password: String,
-    totalSeats: Number,
-    availableSeats: Number,
     carMembers: [{
         username: String
     }]

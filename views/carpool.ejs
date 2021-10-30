@@ -15,12 +15,21 @@
             <div class="col-6 float-start">
                 <h1>Welcome, <%= user.username %></h1>
             </div>
-            <div class="col-6">
-                <form action="/newCarpool" method="POST">
-                    <button name=<%= user.username %> class="carpool-button float-end">Make a new carpool!</button>
-                </form>
-            </div>
+            <% if (user.carMembers.length == 0) { %>
+                <div class="col-6">
+                    <form action="/newCarpool" method="POST">
+                        <button name="username" value=<%= user.username %> class="carpool-button float-end">Make a new carpool!</button>
+                    </form>
+                </div>
+            <% } %>
         </div>
+        <% if (user.carMembers.length != 0) { %>
+            <hr>
+            <h3>Your Carpool!</h3>
+            <% user.carMembers.forEach(function(member){ %>
+                <p> <%= member.username %> </p>
+            <% }); %>
+        <% } %>
         <hr>
         <h3>Available Carpools</h3>
         

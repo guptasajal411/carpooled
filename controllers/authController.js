@@ -27,9 +27,8 @@ exports.postHomepage = function(req, res){
                             res.send(err);
                         } else {
                             res.render("carpool", { user: foundUser, allUsers: users });
-                            console.log(users);
                         }
-                    })
+                    });
                 } else {
                     res.send("auth unsuccessful");
                 }
