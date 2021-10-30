@@ -7,13 +7,16 @@ exports.postNewCarpool = function(req, res){
         } else {
             foundUser.carMembers.push({ username: req.body.username });
             await foundUser.save();
-            User.find({}, function(err, users){
-                if(err) {
-                    res.send(err);
-                } else {
-                    res.redirect("/");
-                }
-            });
+            res.redirect("/");
         }
+    });
+}
+
+exports.postJoinCarpool = function(req, res){
+    // console.log(req.body)
+    User.findOne({ username: req.body.carOwnerName }, async function(err, foundUser){
+        foundUser.carMembers.push({ username: req.body.username });
+        await foundUser.save();
+        res.redirect("/");
     });
 }

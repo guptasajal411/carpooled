@@ -47,7 +47,7 @@
 }
 
 .glassmorphism {
-    background: rgba( 255, 255, 255, 0.1 );
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 15px );
     -webkit-backdrop-filter: blur( 15px );
@@ -55,4 +55,25 @@
     border-top-right-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: white;
+}
+
+.glassmorphism-success {
+    background: #00ff0445;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+}
+
+.glassmorphism-radius{
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+    border-radius: 10px;
 }

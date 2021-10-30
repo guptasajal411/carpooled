@@ -13,4 +13,8 @@ app
     .route("/newCarpool")
     .post(carpoolController.postNewCarpool);
 
+app
+    .route("/joinCarpool")
+    .post(carpoolController.postJoinCarpool);
+
 module.exports = app;

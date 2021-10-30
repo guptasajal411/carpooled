@@ -32,17 +32,33 @@
         <% } %>
         <hr>
         <h3>Available Carpools</h3>
-        <% allUsers.forEach(function(singleUser){ %>
-            <% if (singleUser.carMembers.length != 0) { %>
-                <div class="card">
-                    <div class="card-body">
-                    <% user.carMembers.forEach(function(carMember){ %>
-                        <%= carMember %>
-                    <% }); %>
-                </div>
+        <div class="container">
+            <div class="row">
+                <% allUsers.forEach(function(singleUser){ %>
+                    <% if (singleUser.username != user.username){ %> <!-- dont render users carpool in all availabe carpools -->
+                        <div class="col-3">
+                            <% if (singleUser.carMembers.length != 0) { %>
+                                <div class="glassmorphism-radius p-3 shadow-bg">
+                                    <div class="">
+                                        <form action="/joinCarpool" method="POST">
+                                            <div class="row">
+                                                <% singleUser.carMembers.forEach(function(carMember){ %>
+                                                    <div class="col-6 text-center bold">
+                                                        <%= carMember.username %>
+                                                    </div>
+                                                <% }); %>
+                                            </div>
+                                            <input type="hidden" name="username" value=<%= user.username %>>
+                                            <button name="carOwnerName" value=<%= singleUser.username %> class="carpool-button" style="width: 100%;">Join this carpool!</button>
+                                        </form>
+                                </div>
+                            </div>
+                            <% } %>
+                        </div>
+                    <% } %>
+                <% }); %>
             </div>
-            <% } %>
-        <% }); %>
+        </div>
     </div>
 </body>
 </html>
