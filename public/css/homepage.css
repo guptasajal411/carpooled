@@ -1,0 +1,41 @@
+body {
+    background: #2980b9;
+    background: -webkit-linear-gradient(
+        to right,
+        #ffffff,
+        #6dd5fa,
+        #2980b9
+    );
+    background: linear-gradient(
+        to right,
+        #ffffff,
+        #6dd5fa,
+        #2980b9
+    );
+    min-height: 100vh;
+}
+
+.container{
+    border-radius: 15px!important;
+}
+
+.row {
+    height: 70vh;
+}
+
+.bg-white{
+    background-color: #fff;
+}
+
+.col-6{
+    border-top-right-radius: 15px!important;
+    border-bottom-right-radius: 15px!important;
+}
+
+form{
+    height: 100%;
+}
+
+form .d-flex{
+    width: 60%;
+}
