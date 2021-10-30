@@ -17,4 +17,8 @@ app
     .route("/joinCarpool")
     .post(carpoolController.postJoinCarpool);
 
+app
+    .route("/leaveCarpool")
+    .post(carpoolController.postLeaveCarpool);
+
 module.exports = app;
