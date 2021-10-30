@@ -3,27 +3,39 @@ body {
     min-height: 100vh;
 }
 
-.container{
-    border-radius: 15px!important;
+.container {
+    border-radius: 15px !important;
 }
 
 .row {
     height: 70vh;
 }
 
-.bg-white{
+.bg-white {
     background-color: #fff;
 }
 
-.col-6{
-    border-top-right-radius: 15px!important;
-    border-bottom-right-radius: 15px!important;
-}
-
-form{
+form {
     height: 100%;
 }
 
-form .d-flex{
+form .d-flex {
     width: 60%;
+}
+
+.zoom-effect-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-card {
+    position: absolute;
+}
+
+.image-card img {
+    transition: 0.4s;
+}
+
+.zoom-effect-container:hover .image-card img {
+    transform: scale(1.05);
 }

@@ -26,19 +26,22 @@
         <% if (user.carMembers.length != 0) { %>
             <hr>
             <h3>Your Carpool!</h3>
-                <div class="row">
-                    <% user.carMembers.forEach(function(member){ %>
-                        <div class="col-3">
-                            <div class="glassmorphism-success p-3 shadow-bg">
-                                <div class="row">
-                                    <div class="col-6 text-center my-2 fs-6 fw-bold">
-                                        <p> <%= member.username %> </p>
-                                    </div>
+            <div class="row">
+                <div class="col-3 hoverAnimation">
+                    <div class="glassmorphism-success p-3 shadow-bg">
+                        <div class="row text-center">
+                            <% user.carMembers.forEach(function(member){ %>
+                                <div class="col-6 text-center my-2 fs-6 fw-bold">
+                                    <p> <%= member.username %> </p>
                                 </div>
-                            </div>
+                            <% }); %>
                         </div>
-                    <% }); %>
+                        <div class="text-center row">
+                            <button name="username" value=<%= user.username %> class="carpool-button mx-3" style="width: -webkit-fill-available;">Delete this carpool</button>
+                        </div>
+                    </div>
                 </div>
+            </div>
         <% } %>
         <hr>
         <h3>Available Carpools</h3>
@@ -46,7 +49,7 @@
             <div class="row">
                 <% allUsers.forEach(function(singleUser){ %>
                     <% if (singleUser.username != user.username){ %> <!-- dont render users carpool in all availabe carpools -->
-                        <div class="col-3">
+                        <div class="col-3 hoverAnimation">
                             <% if (singleUser.carMembers.length != 0) { %>
                                 <% if(singleUser.carMembers.some(person => person.username == user.username)){ %>
                                     <div class="glassmorphism-success p-3 shadow-bg">
@@ -56,7 +59,7 @@
                                         <form id= "leaveCarpool" action="/leaveCarpool" method="POST">
                                         </form>
                                         <form action="/joinCarpool" method="POST">
-                                            <div class="row">
+                                            <div class="row text-center">
                                                 <% singleUser.carMembers.forEach(function(carMember){ %>
                                                     <div class="col-6 text-center my-2 fs-6 fw-bold">
                                                         <%= carMember.username %>
@@ -64,13 +67,13 @@
                                                 <% }); %>
                                                 <% if(singleUser.carMembers.some(person => person.username == user.username)){ %>
                                                     <input form="leaveCarpool" type="hidden" name="username" value=<%= user.username %>>
-                                                    <button form="leaveCarpool" name="carOwnerName" value=<%= singleUser.username %> class="carpool-button mt-3" style="width: 100%;">Leave this carpool</button>
+                                                    <button form="leaveCarpool" name="carOwnerName" value=<%= singleUser.username %> class="carpool-button mt-3 mx-3" style="width: -webkit-fill-available;">Leave this carpool</button>
                                                 <% } else { %>
                                                     <% if(singleUser.carMembers.length >= 4){ %>
-                                                        <button disabled class="carpool-button mt-3" style="width: 100%;">This carpool is full</button>
+                                                        <button disabled class="carpool-button mt-3 mx-3" style="width: -webkit-fill-available;">This carpool is full</button>
                                                     <% } else { %>
                                                         <input type="hidden" name="username" value=<%= user.username %>>
-                                                        <button name="carOwnerName" value=<%= singleUser.username %> class="carpool-button mt-3" style="width: 100%;">Join this carpool!</button>
+                                                        <button name="carOwnerName" value=<%= singleUser.username %> class="carpool-button mt-3 mx-3" style="width: -webkit-fill-available;">Join this carpool!</button>
                                                     <% } %> 
                                                 <% } %>
                                             </div>

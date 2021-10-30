@@ -52,7 +52,7 @@
     backdrop-filter: blur( 30px );
     -webkit-backdrop-filter: blur( 15px );
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: white;
 }
@@ -75,4 +75,12 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: white;
     border-radius: 10px;
+}
+
+.hoverAnimation{
+    transition: all 0.33s;
+}
+
+.hoverAnimation:hover{
+    transform: scale(1.075);
 }
