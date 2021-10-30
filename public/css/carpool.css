@@ -1,0 +1,9 @@
+body {
+    background: url("/img/bg.png") no-repeat center center/cover;
+    min-height: 100vh;
+}
+
+.container{
+    border-radius: 15px!important;
+    height: 70vh;
+}

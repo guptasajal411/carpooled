@@ -22,7 +22,14 @@ exports.postHomepage = function(req, res){
             } else {
                 console.log("user found");
                 if (foundUser.password == md5(req.body.password)){
-                    res.send("auth successful");
+                    User.find({}, function(err, users){
+                        if(err) {
+                            res.send(err);
+                        } else {
+                            res.render("carpool", { user: foundUser, allUsers: users });
+                            console.log(users);
+                        }
+                    })
                 } else {
                     res.send("auth unsuccessful");
                 }
