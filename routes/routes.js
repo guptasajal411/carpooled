@@ -21,4 +21,8 @@ app
     .route("/leaveCarpool")
     .post(carpoolController.postLeaveCarpool);
 
+app
+    .route("/deleteCarpool")
+    .post(carpoolController.postDeleteCarpool);
+
 module.exports = app;

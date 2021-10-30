@@ -37,7 +37,9 @@
                             <% }); %>
                         </div>
                         <div class="text-center row">
-                            <button name="username" value=<%= user.username %> class="carpool-button mx-3" style="width: -webkit-fill-available;">Delete this carpool</button>
+                            <form action="/deleteCarpool" method="POST">
+                                <button name="username" value=<%= user.username %> class="carpool-button mx-3" style="width: -webkit-fill-available;">Delete this carpool</button>
+                            </form>
                         </div>
                     </div>
                 </div>
