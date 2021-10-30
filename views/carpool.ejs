@@ -32,7 +32,17 @@
         <% } %>
         <hr>
         <h3>Available Carpools</h3>
-        
+        <% allUsers.forEach(function(singleUser){ %>
+            <% if (singleUser.carMembers.length != 0) { %>
+                <div class="card">
+                    <div class="card-body">
+                    <% user.carMembers.forEach(function(carMember){ %>
+                        <%= carMember %>
+                    <% }); %>
+                </div>
+            </div>
+            <% } %>
+        <% }); %>
     </div>
 </body>
 </html>
