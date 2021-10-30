@@ -51,10 +51,14 @@
                                             <% if(singleUser.carMembers.some(person => person.username == user.username)){ %>
                                                 <input form="leaveCarpool" type="hidden" name="username" value=<%= user.username %>>
                                                 <button form="leaveCarpool" name="carOwnerName" value=<%= singleUser.username %> class="carpool-button" style="width: 100%;">Leave this carpool</button>
-                                            <% } else { %>
-                                                <input type="hidden" name="username" value=<%= user.username %>>
-                                                <button name="carOwnerName" value=<%= singleUser.username %> class="carpool-button" style="width: 100%;">Join this carpool!</button>
+                                                <% } else { %>
+                                                    <input type="hidden" name="username" value=<%= user.username %>>
+                                                    <button name="carOwnerName" value=<%= singleUser.username %> class="carpool-button" style="width: 100%;">Join this carpool!</button>
+                                                    <% if(singleUser.carMembers.length >= 4){ %>
+                                                        <button class="carpool-button" style="width: 100%;">This carpool is full</button>
+                                                    <% } %>
                                             <% } %>
+                                        </div>
                                     </form>
                                 </div>
                             <% } %>
