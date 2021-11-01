@@ -36,7 +36,7 @@ We all know that carpooling can save fuel and reduce greenhouse gas emmisions. B
 - Preview on REPL! - https://carpooled.guptasajal411.repl.co
 
 # 🤔 How to use this?
-- You can access all cool features of Bookshelfly here: https://carpooled.guptasajal411.repl.co/
+- You can access all cool features of Carpooled here: https://carpooled.guptasajal411.repl.co/
 - For running the app locally on your system, follow these steps: 
   -  Clone the project repository: `git clone https://github.com/guptasajal411/carpooled.git`
   -  Move to the project directory: `cd carpooled`
